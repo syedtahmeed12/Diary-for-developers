@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; text-align: center; }
+        h1 { color: #333; }
+        form { margin-bottom: 20px; }
+        textarea { width: 80%; height: 50px; }
+        button { padding: 10px; cursor: pointer; }
+        .note { background: #f9f9f9; padding: 10px; margin: 10px auto; width: 80%; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Notes App</h1>
+    
+    <form action="/add" method="post">
+        <textarea name="note" placeholder="Enter your note here..." required></textarea><br>
+        <button type="submit">Add Note</button>
+    </form>
+
+    <h2>Saved Notes</h2>
+    {% for note in notes %}
+        <div class="note">{{ note }}</div>
+    {% endfor %}
+    <footer style="color: darkslategray; background-color: darkgrey; border: 3px solid rgb(68, 68, 68); text-align: center; text-transform: capitalize;">
+        <h4>
+            DEVELOPER :> TAHMEED AHAMD<br>
+            Contact: syedtahmeed2003@gmail.com<br>
+            Phone: 9297624084<br>
+            © 2025 TAHMEED AHAMD & N_Z_A. All Rights Reserved. Reproduction or distribution without permission is prohibited.
+        </h4>
+    </footer>
+</body>
+</html>
